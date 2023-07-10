@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './App.css'
+import './App.css';
 function ToDoList() {
   const [todos, setTodos] = useState(['Acheter du pain', 'Prendre rendez-vous']);
   const [newTodo, setNewTodo] = useState('');
