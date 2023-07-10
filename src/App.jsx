@@ -1,35 +1,55 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import React, { useState } from 'react';
 import './App.css'
+function ToDoList() {
+  const [todos, setTodos] = useState(['Acheter du pain', 'Prendre rendez-vous']);
+  const [newTodo, setNewTodo] = useState('');
 
-function App() {
-  const [count, setCount] = useState(0)
+  const handleInputChange = (e) => {
+    setNewTodo(e.target.value);
+  };
+
+  const handleAddTodo = () => {
+    if (newTodo !== '') {
+      setTodos([...todos, newTodo]);
+      setNewTodo('');
+    }
+  };
+
+  const handleCheckboxChange = (index) => {
+    const updatedTodos = todos.filter((_, i) => i !== index);
+    setTodos(updatedTodos);
+  };
+
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <header>
+      <h1>My to-do list</h1>
+    </header>
+      <div className="todo">
+      <input
+      className="todo_input"
+        type="text"
+        value={newTodo}
+        onChange={handleInputChange}
+        placeholder="Ajouter une tâche"
+      />
+        <button className='todo_button' onClick={handleAddTodo}>ajouter</button>
+        <ul>
+        {todos.map((todo, index) => (
+          <li key={index}>
+            <input
+            className='todo_checkbox'
+              type="checkbox"
+              onChange={() => handleCheckboxChange(index)}
+            />
+            {todo}
+          </li>
+        ))}
+      </ul>
       </div>
-      <h1>Learn React @ beCode</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
 
-export default App
+export default ToDoList;
