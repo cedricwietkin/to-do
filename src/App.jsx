@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 function ToDoList() {
-  const [todos, setTodos] = useState(['Acheter du pain', 'Prendre rendez-vous']);
+  const [todos, setTodos] = useState(['pain', 'chocolat']);
   const [newTodo, setNewTodo] = useState('');
 
   const handleInputChange = (e) => {
@@ -26,16 +26,18 @@ function ToDoList() {
     <header>
       <h1>My to-do list</h1>
     </header>
+    <form>
       <div className="todo">
-      <input
-      className="todo_input"
-        type="text"
-        value={newTodo}
-        onChange={handleInputChange}
-        placeholder="Ajouter une tâche"
-      />
-        <button className='todo_button' onClick={handleAddTodo}>ajouter</button>
-        <ul>
+        <div className='todo_first'>
+          <input className="todo_input"
+                 type="text"
+                 value={newTodo}
+                 onChange={handleInputChange}
+                 placeholder="Veuillez rentrer un nouvel élément"
+          />
+            <button className='todo_button' onClick={handleAddTodo}>ajouter</button>
+        </div>
+        <ul className='list'>
         {todos.map((todo, index) => (
           <li key={index}>
             <input
@@ -48,6 +50,7 @@ function ToDoList() {
         ))}
       </ul>
       </div>
+      </form>
     </>
   )
 }
