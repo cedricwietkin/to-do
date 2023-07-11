@@ -3,8 +3,8 @@ header{
     flex-direction: column;
     align-items: center;
     font-size: 34px;
-    color: azure;
-    background-color: black;
+    color: #500000;
+    background-color: #964d4d;
     margin: 0;
     margin-bottom: 2rem;
     h1{
@@ -25,8 +25,8 @@ header{
 }
 
 .todo_input{
-    border: 2px solid red;
-    background-color: black;
+    border: 2px solid #964d4d;
+    background-color: #500000;
     color: white;
     border-radius: 2rem;
     height: 3rem;
@@ -43,9 +43,21 @@ header{
     width: 30%;
     height: 3rem;
     border-radius: 2rem;
+    margin-left : 1rem;
 }
 
 .list{
     display: flex;
     flex-direction: column;
+    list-style: none;
+    .todo_item{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 80vw;
+        margin: 0.5rem;
+    }
+    .todo_iconButton{
+        margin: 0.5rem;
+    }
 }
