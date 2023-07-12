@@ -1,7 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@100&display=swap");
-@import "//component/social.scss";
-@import '//component/color.scss';
-@import '//src/component/star.scss';
+.social-media ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+.social-media ul a {
+  text-decoration: none;
+  color: black;
+}
+.social-media ul a p {
+  color: aqua;
+}
+
+footer {
+  background-color: #7c2ae8;
+}
+footer .social-media ul {
+  margin: 0;
+  padding: 1rem;
+}
+footer .social-media ul li a {
+  color: white;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 * {
   font-family: "Roboto Flex", sans-serif;
 }
@@ -34,14 +58,6 @@ header .contact {
   color: #00C0E4;
 }
 
-form {
-  min-height: 400px;
-  margin-top: 2rem;
-  border: 2px solid #7c2ae8;
-  border-radius: 10%;
-  height: auto;
-}
-
 .todo {
   display: flex;
   flex-direction: column;
@@ -49,12 +65,14 @@ form {
   padding: 2rem;
   background-image: url("/img/astronomy-ga8d594e66_1280.jpg");
   background-size: cover;
-  animation: back 10s infinite linear;
+  animation: back 20s infinite alternate;
+  height: 70vh;
 }
 
 .todo_first {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
 }
 
@@ -64,7 +82,7 @@ form {
   color: white;
   border-radius: 2rem;
   height: 3rem;
-  width: 60%;
+  width: 30vw;
 }
 .todo_input ::placeholder {
   color: white;
@@ -72,13 +90,33 @@ form {
 }
 
 .todo_button {
-  width: 30%;
+  width: 10vw;
   height: 3rem;
   border-radius: 2rem;
   margin-left: 1rem;
   border: 2px solid;
   background-color: #00C0E4;
   color: white;
+}
+
+.table {
+  height: auto;
+  margin-top: 2rem;
+  border: 2px solid #7c2ae8;
+  border-radius: 2rem;
+  background-color: #00C0E4;
+  opacity: 0.8;
+}
+.table .category {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  border: 2px solid #7c2ae8;
+  border-radius: 2rem;
+}
+.table .category p {
+  color: #7c2ae8;
+  font-weight: bold;
 }
 
 .list {
@@ -90,9 +128,11 @@ form {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 80vw;
+  width: 60vw;
   margin: 0.5rem;
-  color: white;
+  color: #7c2ae8;
+  font-size: 20px;
+  font-weight: bold;
 }
 .list .todo_item .todo_iconButton {
   margin: 0.5rem;

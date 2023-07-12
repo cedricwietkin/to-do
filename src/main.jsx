@@ -3,13 +3,14 @@ import ReactDOM from 'react-dom/client'
 import './css/App.css'
 import ToDoList from './App.jsx'
 import Header from './jsx/header.jsx'
-import Social from './jsx/social'
+import Footer from './jsx/footer'
+
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Header/>
     <ToDoList/>
-    <Social/>
+    <Footer/>
   </React.StrictMode>,
 )
