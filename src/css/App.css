@@ -1,51 +1,55 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@100&display=swap");
+@import "//component/social.scss";
 @import '//component/color.scss';
-.social-media ul {
-  display: flex;
-  justify-content: space-around;
-  list-style: none;
-}
-.social-media ul a {
-  text-decoration: none;
-  color: #500000;
-}
-
+@import '//src/component/star.scss';
 * {
   font-family: "Roboto Flex", sans-serif;
 }
 
 #root {
-  height: 100vh;
-  background-image: url("/img/astronomy-ga8d594e66_1280.jpg");
-  background-size: cover;
-  animation: fadein-frames 200ms infinite, scale-frames 2s infinte;
+  height: 98vh;
 }
 
 header {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   font-size: 34px;
   color: #00C0E4;
   background-color: #7c2ae8;
+  opacity: 1;
   margin: 0;
-  margin-bottom: 2rem;
+  height: 10rem;
+}
+header .logo {
+  height: 10rem;
 }
 header h1 {
+  display: flex;
   margin: 0;
+}
+header .contact {
+  padding: 1rem;
+  text-decoration: none;
+  color: #00C0E4;
 }
 
 form {
   min-height: 400px;
   margin-top: 2rem;
-  border: 2px solid;
+  border: 2px solid #7c2ae8;
   border-radius: 10%;
+  height: auto;
 }
 
 .todo {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 2rem;
+  background-image: url("/img/astronomy-ga8d594e66_1280.jpg");
+  background-size: cover;
+  animation: back 10s infinite linear;
 }
 
 .todo_first {
@@ -56,7 +60,7 @@ form {
 
 .todo_input {
   border: 2px solid;
-  background-color: #500000;
+  background-color: #00C0E4;
   color: white;
   border-radius: 2rem;
   height: 3rem;
@@ -64,7 +68,7 @@ form {
 }
 .todo_input ::placeholder {
   color: white;
-  font-style: italic;
+  font-style: bold;
 }
 
 .todo_button {
@@ -72,8 +76,8 @@ form {
   height: 3rem;
   border-radius: 2rem;
   margin-left: 1rem;
-  border: 2px solid #964d4d;
-  background-color: #500000;
+  border: 2px solid;
+  background-color: #00C0E4;
   color: white;
 }
 
@@ -88,39 +92,25 @@ form {
   justify-content: space-between;
   width: 80vw;
   margin: 0.5rem;
-  color: #500000;
+  color: white;
 }
 .list .todo_item .todo_iconButton {
   margin: 0.5rem;
-  background-color: #500000;
-  border: #964d4d;
+  background-color: white;
+  border: white;
   border-radius: 20%;
 }
 .list .todo_item .todo_iconButton .fas {
   margin: 0.2rem;
-  color: #964d4d;
+  color: #7c2ae8;
 }
 
-@keyframes fade-frames {
+@keyframes back {
   0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.7;
+    background-position: 0 0;
   }
   100% {
-    opacity: 1;
-  }
-}
-@keyframes scale-frames {
-  0% {
-    transform: scale3d(0.4, 0.4, 1);
-  }
-  50% {
-    transform: scale3d(2.2, 2.2, 1);
-  }
-  100% {
-    transform: scale3d(0.4, 0.4, 1);
+    background-position: -200px -200px;
   }
 }
 
