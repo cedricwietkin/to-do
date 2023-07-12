@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import './App.css';
+import './css/App.css';
+
+
 
 function ToDoList() {
   const [todos, setTodos] = useState([
@@ -40,10 +42,6 @@ function ToDoList() {
 
   return (
     <>
-      <header>
-        <h1>My to-do list</h1>
-      </header>
-      <form>
         <div className="todo">
           <div className="todo_first">
             <input
@@ -57,6 +55,7 @@ function ToDoList() {
               ajouter
             </button>
           </div>
+          <form>
           <ul className="list">
             {todos.map((todo, index) => (
               <li key={index} className="todo_item">
@@ -72,20 +71,21 @@ function ToDoList() {
                   className="todo_iconButton"
                   onClick={() => handleEditTodo(index)}
                 >
-                  <i className="fa-regular fa-pen-to-square" style="color:#642b2b;"></i>
+                  <i className="fas fa-edit"></i>
                 </button>
                 <button
                   className="todo_iconButton"
                   onClick={() => handleDeleteTodo(index)}
                 >
-                  <i className="fa-solid fa-trash-can" style="color: #642b2b;"></i>
+                  <i className="fas fa-trash"></i>
                 </button>
                 </div>
               </li>
             ))}
           </ul>
+          </form>
         </div>
-      </form>
+     
     </>
   );
 }

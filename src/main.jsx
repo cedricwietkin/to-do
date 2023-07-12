@@ -1,10 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './App.css'
+import './css/App.css'
+import ToDoList from './App.jsx'
+import Header from './component-jsx/header.jsx'
+import Social from './component-jsx/social'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <Header/>
+    <ToDoList />
+    <Social/>
   </React.StrictMode>,
 )
