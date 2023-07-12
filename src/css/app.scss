@@ -1,0 +1,131 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@100&display=swap');
+@import "//component/social.scss";
+@import '//component/color.scss';
+@import '//src/component/star.scss';
+
+*{
+    font-family: 'Roboto Flex', sans-serif;
+
+}
+
+#root{
+    height: 98vh;
+   
+   
+    
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 34px;
+    color: #00C0E4;
+    background-color: #7c2ae8;
+    opacity: 1;
+    margin: 0;
+    height: 10rem;
+    
+    .logo{
+      height: 10rem;
+      
+    }
+    
+    h1{
+      display: flex;
+        
+        margin: 0;
+    }
+    .contact{
+      padding: 1rem;
+      text-decoration: none;
+      color: #00C0E4;
+    }
+}
+form{
+    min-height: 400px;
+    margin-top: 2rem;
+    border: 2px solid #7c2ae8;
+    border-radius: 10%;
+    height: auto;
+}
+
+.todo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-image: url('/img/astronomy-ga8d594e66_1280.jpg');
+    background-size: cover;
+    animation: back 10s infinite linear;
+}
+
+.todo_first{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.todo_input{
+    border: 2px solid ;
+    background-color: #00C0E4;
+    color: white;
+    border-radius: 2rem;
+    height: 3rem;
+    width: 60%;
+    ::placeholder {
+        color: white; 
+        font-style: bold; 
+        
+        
+      }
+}
+
+.todo_button{
+    width: 30%;
+    height: 3rem;
+    border-radius: 2rem;
+    margin-left : 1rem;
+    border: 2px solid ;
+    background-color: #00C0E4;
+    color: white;
+}
+
+.list{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    
+    .todo_item{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 80vw;
+        margin: 0.5rem;
+        color: white;
+
+    
+
+    .todo_iconButton{
+        margin: 0.5rem;
+        background-color: white;
+        border: white;
+        border-radius: 20%;
+
+        .fas{
+            margin: 0.2rem;
+            color: #7c2ae8;
+        }
+    }
+}
+}
+
+@keyframes back {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: -200px -200px;
+    }
+  }
+  
