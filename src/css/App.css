@@ -154,5 +154,32 @@ header .contact {
     background-position: -200px -200px;
   }
 }
+@media screen and (max-width: 768px) {
+  header {
+    font-size: 24px;
+  }
+  header .logo {
+    height: 6rem;
+  }
+  header h1 {
+    font-size: 24px;
+  }
+  .contact {
+    padding: 0.5rem;
+  }
+  .todo_input {
+    width: 80vw;
+  }
+  .todo_button {
+    width: 20vw;
+  }
+  .table {
+    min-width: 80vw;
+  }
+  .list .todo_item {
+    width: 80vw;
+    font-size: 16px;
+  }
+}
 
 /*# sourceMappingURL=app.css.map */
