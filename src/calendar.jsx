@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-export default function calendar(){
+export default function Calendar(){
     return(
         <>
           <section className='whiteBox'>

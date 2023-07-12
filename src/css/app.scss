@@ -54,7 +54,7 @@ header{
     padding: 2rem;
     background-image: url('/img/astronomy-ga8d594e66_1280.jpg');
     background-size: cover;
-    animation: back 20s infinite alternate;
+    animation: back 30s infinite alternate;
     height: 70vh;
 }
 
@@ -152,7 +152,7 @@ header{
       background-position: 0 0;
     }
     100% {
-      background-position: -200px -200px;
+      background-position: 100% 100%;
     }
   }
   
